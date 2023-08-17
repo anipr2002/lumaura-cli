@@ -8,7 +8,18 @@ import { HiVolumeUp } from 'react-icons/hi'
 
 
 const ComingSoon = () => {
-  const[play,{ stop }] = useSound(music, {volume: 0.010});
+  const[play, {stop}] = useSound(music, {volume: 0.010});
+  const [isPlaying, setIsPlaying] = useState(false);
+   const handleParagraphClick = () => {
+    if (isPlaying) {
+      setIsPlaying(false);
+      stop();
+    } else {
+      
+      play(); 
+      setIsPlaying(true);
+    }
+  };
   return (
     <div className='flex flex-col h-screen w-screen justify-between items-center'>
 
@@ -21,8 +32,8 @@ const ComingSoon = () => {
         </Marquee>
       </div>
 
-      <p className='text-white font-ubuntu tracking-[0.4em] w-auto m-auto
-                        sm:text-[5rem] md:text-[9rem] lg:text-[11rem] xl:text-[15rem]
+      <p onClick={handleParagraphClick} className='text-white font-ubuntu tracking-[0.4em] w-auto m-auto
+                        text-[3rem] sm:text-[5rem] md:text-[9rem] lg:text-[11rem] xl:text-[15rem]
                         font-bold text-center flex justify-center items-center
                         '>
         LUMAURA
