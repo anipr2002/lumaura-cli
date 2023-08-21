@@ -40,8 +40,8 @@ const ComingSoon = () => {
       width: 200,
       x: mousePosition.x - 100,
       y: mousePosition.y - 100,
-      backgroundColor: "yellow",
-      mixBlendMode: "difference"
+      backgroundColor: "blue",
+      mixBlendMode: 'difference'
     }
   }
 
@@ -90,13 +90,16 @@ const ComingSoon = () => {
           <span className='px-7'> COMING SOON </span>
           <span className='px-7'> UNDER MAINTAINANCE </span>
         </Marquee>
-      </div> 
-
-      <motion.div className="bg-[#F8DE22] h-[32px] w-[32px]
+      </div>
+      <div className='text-white absolute right-0 top-[1.6rem]'
+            onClick={handleParagraphClick}><HiVolumeUp size={30} /></div> 
+      
+      <motion.div className="bg-[#068FFF] h-[32px] w-[32px]
                      rounded-[50%] fixed top-0 left-0 pointer-events-none" 
                      variants={variants}
-                     animate={cursorVariant}/>
-
+                     animate={cursorVariant}
+                     transition={{type: "tween", ease: "backOut"}}/>
+      
       
 
     </div>

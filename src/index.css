@@ -5,13 +5,32 @@
 @tailwind utilities;
 
 *{
-    cursor: none;
+    /* cursor: none; */
 }
 
 body{
-    background: #282828;
+    /* background: #282828; */
     height: 100vh;
     overflow: hidden;
-    font-family: Ubunto Mono, monospace;
+    
 }
 
+ul{
+    list-style: none;
+   
+}
+
+li{
+    list-style: no;
+}
+
+/* write a custom class for tailwind component */
+
+.circle{
+    @apply h-3 w-3 rounded-[5000px] mx-2 border-[2px] 
+                                border-solid border-[#242b2d];
+}
+
+.circle.filled{
+    @apply bg-[#242b2d];
+}
