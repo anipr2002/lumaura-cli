@@ -3,9 +3,14 @@ import Marquee from 'react-fast-marquee'
 import {motion} from 'framer-motion'
 import useSound from 'use-sound';
 import music from '../assets/Olepash_-_Easy_Joy.mp3'
+import { FcGallery } from 'react-icons/fc'
+import { FiMusic } from 'react-icons/fi'
+import { GrContact } from 'react-icons/gr'
+import MagneticIcons from '../components/MagneticIcons';
+
 
 const HomePage = () => {
- 
+
 const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
@@ -52,7 +57,6 @@ const handleParagraphClick = () => {
       setIsPlaying(false);
       stop();
     } else {
-      
       play(); 
       setIsPlaying(true);
     }
@@ -97,13 +101,53 @@ const handleParagraphClick = () => {
 
         <div className='flex items-center flex-col text-center text-[2rem] tracking-wide
                         leading-[2.2rem] max-[480px]:text-[1.5rem] max-[480px]:mb-[2rem]'>
-                    <div className='pt-[2rem] pb-[2rem] ' onMouseEnter={textEnter}
-                    onMouseLeave={textLeave}>
-                        <h1 onClick={handleParagraphClick} className='font-albert py-4 font-bold text-[64px] text-[#FF2B59]'>
-                            LUMAURA
-                        <span className='mx-0.5 text-sm'>©</span></h1>
+            <div className='pt-[2rem] pb-[2rem] '
+                onMouseEnter={textEnter}
+                onMouseLeave={textLeave}>
+
+                <h1 className='font-albert flex relative 
+                            py-4 px-4 font-bold text-[64px] text-[#FF2B59]'>
+
+                    <MagneticIcons><span>LUMAURA</span> </MagneticIcons>
+
+                    <span className='mx-0.5 text-sm bottom-1.5 right-[-0.24rem] absolute'>©</span>
+
+                    <MagneticIcons>
+                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
+                                        bottom-[80%] right-[100%] bg-orange-100
+                                        flex justify-center items-center'>
+                            <div><FcGallery size={50}/>
+                                <p className='font-ubuntu text-sm'> Gallery </p>
+                            </div>
+                                    
+                        </div>
+                    </MagneticIcons>
+
+                    <MagneticIcons>
+                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
+                                        top-[-7.5rem] left-[0rem] bg-teal-100
+                                        flex justify-center items-center'>
+                            <div><GrContact size={50}/>
+                                <p className='font-ubuntu text-sm'> Contact </p>
+                            </div>
+                                    
+                        </div>
+                    </MagneticIcons>  
+
+                    <MagneticIcons>
+                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
+                                        bottom-[7.5rem] right-[-3rem] bg-purple-500
+                                        flex justify-center items-center'>
+                            <div onClick={handleParagraphClick}><FiMusic size={50}/>
+                                <p className='font-ubuntu text-sm'> Sound </p>
+                            </div>
+                                    
+                        </div>
+                    </MagneticIcons>                                      
+                </h1>
+                
+            </div>      
                         
-                    </div>      
         </div>
 
         <div className='h-[50%] w-full'>
@@ -135,11 +179,12 @@ const handleParagraphClick = () => {
         </div>    
 
         <motion.div className="bg-[#068FFF] h-[32px] w-[32px]
-                     rounded-[50%] fixed top-0 left-0 pointer-events-none" 
-                     variants={variants}
-                     animate={cursorVariant}
-                     transition={{type: "tween", ease: "backOut"}}/>   
-
+                rounded-[50%] fixed top-0 left-0 pointer-events-none z-20" 
+                variants={variants}
+                animate={cursorVariant}
+                transition={{type: "tween", ease: "backOut"}}> 
+        </motion.div>
+            
     </div>
   )
 }

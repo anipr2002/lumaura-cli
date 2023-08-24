@@ -8,6 +8,7 @@
     cursor:default;
 }
 
+
 body{
     /* background: #282828; */
     height: 100vh;
@@ -35,5 +36,3 @@ li{
     @apply bg-[#242b2d];
 }
 
-/* styles.css */
-    
