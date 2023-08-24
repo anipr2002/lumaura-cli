@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         ubuntu: ['Ubunto Mono', 'monospace'],
-        studio: ['Studio Pro', 'sans-serif']
+        studio: ['Studio Pro', 'sans-serif'],
+        albert: ['Albert ExtraBold', 'sans-serif'],
       }
     },
   },

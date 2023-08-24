@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import ComingSoon from './components/ComingSoon'
 import Home from './pages/Home'
+import Showcase from './pages/Showcase'
+import HomePage from './pages/HomePage'
+
 function App() {
 
   return (
     <>
-      {/* <ComingSoon /> */}
-      <Home />
+      {/* <Home /> */}
+      {/* <Showcase /> */}
+      <HomePage />
+
     </>
   )
 }

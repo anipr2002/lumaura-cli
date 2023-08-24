@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 *{
-    /* cursor: none; */
+    cursor:default;
 }
 
 body{
     /* background: #282828; */
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     
 }
 
@@ -34,3 +34,6 @@ li{
 .circle.filled{
     @apply bg-[#242b2d];
 }
+
+/* styles.css */
+    
