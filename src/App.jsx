@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Home from './pages/Home'
 import Showcase from './pages/Showcase'
 import HomePage from './pages/HomePage'
-
+import GalleryMenuPage from './pages/GalleryMenuPage'
 
 function App() {
 
@@ -10,8 +10,8 @@ function App() {
     <>
       {/* <Home /> */}
       {/* <Showcase /> */}
-      <HomePage />
-
+      {/* <HomePage /> */}
+      <GalleryMenuPage />
     </>
   )
 }

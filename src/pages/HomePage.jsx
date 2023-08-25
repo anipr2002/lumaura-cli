@@ -8,7 +8,6 @@ import { FiMusic } from 'react-icons/fi'
 import { GrContact } from 'react-icons/gr'
 import MagneticIcons from '../components/MagneticIcons';
 
-
 const HomePage = () => {
 
 const [mousePosition, setMousePosition] = useState({
@@ -99,35 +98,26 @@ const handleParagraphClick = () => {
             </div>            
         </div>
 
-        <div className='flex items-center flex-col text-center text-[2rem] tracking-wide
+        <div className='flex items-center justify-center flex-col text-center text-[2rem] tracking-wide
                         leading-[2.2rem] max-[480px]:text-[1.5rem] max-[480px]:mb-[2rem]'>
             <div className='pt-[2rem] pb-[2rem] '
-                onMouseEnter={textEnter}
-                onMouseLeave={textLeave}>
+                >
 
-                <h1 className='font-albert flex relative 
-                            py-4 px-4 font-bold text-[64px] text-[#FF2B59]'>
-
-                    <MagneticIcons><span>LUMAURA</span> </MagneticIcons>
-
-                    <span className='mx-0.5 text-sm bottom-1.5 right-[-0.24rem] absolute'>©</span>
-
-                    <MagneticIcons>
-                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
-                                        bottom-[80%] right-[100%] bg-orange-100
-                                        flex justify-center items-center'>
-                            <div><FcGallery size={50}/>
-                                <p className='font-ubuntu text-sm'> Gallery </p>
-                            </div>
-                                    
-                        </div>
-                    </MagneticIcons>
+                <h1 onMouseEnter={textEnter}
+                  onMouseLeave={textLeave}
+                  className='font-albert py-4 px-4 font-bold text-[64px] text-[#FF2B59]'>
+                    <MagneticIcons><span>LUMAURA</span>
+                      <span className='mx-0.5 text-sm bottom-[2rem] right-[-0.24rem]'>©</span>
+                      </MagneticIcons>
+                  </h1>
+                  
+                  <div className='flex mt-8'>
 
                     <MagneticIcons>
-                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
-                                        top-[-7.5rem] left-[0rem] bg-teal-100
-                                        flex justify-center items-center'>
-                            <div><GrContact size={50}/>
+                        <div className='h-[4rem] w-[4rem] rounded-full 
+                                         bg-teal-100
+                                        flex flex-col justify-center items-center'>
+                            <div className='flex flex-col justify-center items-center'><GrContact size={20}/>
                                 <p className='font-ubuntu text-sm'> Contact </p>
                             </div>
                                     
@@ -135,16 +125,29 @@ const handleParagraphClick = () => {
                     </MagneticIcons>  
 
                     <MagneticIcons>
-                        <div className='absolute h-[6rem] w-[6rem] rounded-full 
-                                        bottom-[7.5rem] right-[-3rem] bg-purple-500
-                                        flex justify-center items-center'>
-                            <div onClick={handleParagraphClick}><FiMusic size={50}/>
-                                <p className='font-ubuntu text-sm'> Sound </p>
+                        <div className='h-[5rem] w-[5rem] rounded-full 
+                                         bg-orange-100
+                                        flex flex-col justify-center items-center'>
+                            <div className='flex flex-col justify-center items-center'><FcGallery size={30}/>
+                                <p className='font-ubuntu text-sm'> Gallery </p>
                             </div>
                                     
                         </div>
-                    </MagneticIcons>                                      
-                </h1>
+                    </MagneticIcons>
+
+                    <MagneticIcons>
+                        <div className='h-[4rem] w-[4rem] rounded-full 
+                                         bg-purple-500 
+                                        flex flex-col justify-center items-center'>
+                            <div className='justify-center items-center' 
+                                onClick={handleParagraphClick}><FiMusic size={30}/>
+                                <p className='font-ubuntu text-sm'> Music </p>
+                            </div>
+                                    
+                        </div>
+                    </MagneticIcons>
+                  </div>                                      
+                
                 
             </div>      
                         
@@ -184,7 +187,7 @@ const handleParagraphClick = () => {
                 animate={cursorVariant}
                 transition={{type: "tween", ease: "backOut"}}> 
         </motion.div>
-            
+                 
     </div>
   )
 }
