@@ -8,6 +8,7 @@ import { FiMusic } from "react-icons/fi";
 import { RiMailAddFill } from "react-icons/ri";
 import MagneticIcons from "../components/MagneticIcons";
 import { Route, Routes, Link } from "react-router-dom";
+import AnimatePages from "../components/AnimatePages";
 
 const HomePage = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -281,4 +282,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default AnimatePages(HomePage);

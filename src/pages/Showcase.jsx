@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import deathly from "../assets/deathly.gif";
 import Marquee from "react-fast-marquee";
+import AnimatePages from "../components/AnimatePages";
 
 const Showcase = () => {
   return (
@@ -37,4 +38,4 @@ const Showcase = () => {
   );
 };
 
-export default Showcase;
+export default AnimatePages(Showcase);
