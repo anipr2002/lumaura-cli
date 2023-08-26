@@ -6,6 +6,7 @@ import { AiFillHome } from "react-icons/ai";
 import logo from "../assets/lumLogo.svg";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
+import AnimatePages from "../components/AnimatePages";
 const projects = [
   {
     title: "Guitar",
@@ -54,7 +55,7 @@ const projects = [
   },
 ];
 
-export default function GalleryMenuPage() {
+const GalleryMenuPage = () => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -174,7 +175,7 @@ export default function GalleryMenuPage() {
       <div className="flex relative w-screen justify-center">
         <motion.div
           whileTap={{ scale: 0.8 }}
-          className="fixed top-6 z-30 hover:cursor-pointer"
+          className="fixed top-6 z-10 hover:cursor-pointer"
         >
           <Link to="/">
             <MagneticIcons>
@@ -245,4 +246,6 @@ export default function GalleryMenuPage() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default AnimatePages(GalleryMenuPage);
