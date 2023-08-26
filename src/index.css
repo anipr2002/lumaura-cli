@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 *{
-    cursor:default;
+    /* cursor:none; */
 }
+
 
 body{
     /* background: #282828; */
@@ -35,5 +36,3 @@ li{
     @apply bg-[#242b2d];
 }
 
-/* styles.css */
-    
