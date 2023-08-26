@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 *{
-    cursor:default;
+    /* cursor:none; */
 }
 
 
